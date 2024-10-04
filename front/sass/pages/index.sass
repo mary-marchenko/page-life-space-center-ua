@@ -1,0 +1,181 @@
+$blue: #00003D
+$blue-basic: #005
+$grey-basic: #E3E3E3
+$grey: #E5E5E5
+$grey-light: #EDEDED
+$grey-dark: #A1A1A1
+$grey-darker: #262832
+$black: #040613
+$magenta: #FF267E
+
+
+$font-suisseIntl-reg: SuisseIntl-Regular, sans-serif //400
+$font-suisseIntl-bold: SuisseIntl-Bold, sans-serif //700
+$font-suisseIntl-semiB: SuisseIntl-SemiBold, sans-serif //600
+$font-robotoCondensed-reg: RobotoCondensed-Regular, sans-serif //400
+$font-robotoCondensed-bold: RobotoCondensed-Bold, sans-serif //700
+
+
+body
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+  overscroll-behavior: none
+  background-color: $blue
+  img,
+  picture
+    max-width: 100%
+    height: auto
+
+body.light
+  background-color: $blue-basic
+
+body.dark
+  background-color: $black
+  .life-space
+    background-color: $grey-darker
+
+.life-space
+  display: flex
+  flex-direction: column
+  align-items: center
+  position: relative
+  background: $blue-basic
+  overflow-x: hidden
+  &__title
+    background-color: $blue
+    width: 100%
+    height: 496px
+    position: relative
+    &-bg
+      position: absolute
+      top: 0
+      left: 50%
+      transform: translateX(-50%)
+      width: 1920px
+      height: 100%
+      background: url('../img/bg-desk.jpg') no-repeat 50% 41%/cover
+      @media screen and (max-width: 1099px)
+        background: url('../img/bg-tab.png') no-repeat 50% 50%/cover
+      @media screen and (max-width: 500px)
+        background: url('../img/bg-mob.png') no-repeat 50% 50%/cover
+    &-text
+      width: 1282px
+      margin: 0 auto
+      padding-left: 56px
+      padding-top: 248px
+      z-index: 1
+      position: relative
+  &__h1
+    font-family: $font-suisseIntl-semiB
+    color: $grey-basic
+    font-size: 32px
+    width: 767px
+    margin-bottom: 10px
+    letter-spacing: 0.7px
+  &__h2
+    font-family: $font-suisseIntl-reg
+    color: $grey-dark
+    font-size: 24px
+    width: 727px
+  &__main
+    width: 1310px
+    padding: 12px 0 24px 71px
+    display: flex
+    justify-content: space-between
+    &-left
+      width: 768px
+    &-right
+      padding-top: 28px
+    &-contacts
+      margin-top: 40px
+      padding: 30px 16px
+  &-h3
+    font-family: $font-robotoCondensed-bold
+    color: $grey
+    font-size: 18px
+    padding: 20px 0
+  &-txt
+    font-family: $font-robotoCondensed-reg
+    font-size: 16px
+    color: $grey
+  &__services
+    font-family: $font-robotoCondensed-reg
+    font-size: 16px
+    color: $grey
+    margin-top: 39px
+    &-item
+      font-family: $font-robotoCondensed-reg
+      font-size: 16px
+      color: $grey
+      margin: 16px 0
+      position: relative
+      padding-left: 16px
+      &:last-child
+        margin-bottom: 0
+      &::before
+        position: absolute
+        content: ''
+        display: block
+        width: 8px
+        height: 8px
+        background-color: $magenta
+        border-radius: 50%
+        left: 0
+        top: 6px
+  &__contacts
+    font-family: $font-robotoCondensed-bold
+    font-size: 18px
+    line-height: 28px
+    letter-spacing: 0.36px
+    color: $grey-light
+    transition: width 0.3s ease
+    &:hover
+      text-decoration: underline
+    &-top
+      display: flex
+    &-item
+      background-color: $blue
+      width: 356px
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      margin-bottom: 25px
+      padding: 20px 20px 30px 20px
+      &:nth-child(1)
+        margin-right: 25px
+    &-social
+      width: 100%
+    &-info
+      display: flex
+      justify-content: center
+      align-items: center
+    &-img
+      display: block
+      width: 24px
+      height: 24px
+      margin-right: 8px
+    &-geo
+      background: url('../img/geo.svg') no-repeat 50% 50%/cover
+    &-phone
+      background: url('../img/phone.svg') no-repeat 50% 50%/cover
+    &-facebook
+      margin-top: 7px
+      background: url('../img/facebook.svg') no-repeat 50% 50%/cover
+    &-instagram
+      margin-top: 7px
+      background: url('../img/instagram.svg') no-repeat 50% 50%/cover
+    &-name
+      font-family: $font-robotoCondensed-reg
+      font-size: 16px
+      line-height: 28px
+      letter-spacing: 0.32px
+      color: $magenta
+
+
+  &-logo
+    width: 408px
+    height: 429px
+
+
+
+
