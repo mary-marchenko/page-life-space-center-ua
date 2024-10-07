@@ -5,7 +5,8 @@ $grey: #E5E5E5
 $grey-light: #EDEDED
 $grey-dark: #A1A1A1
 $grey-darker: #262832
-$black: #040613
+$grey-darkest: #1B1D27
+$black: #0F1117
 $magenta: #FF267E
 
 
@@ -26,12 +27,51 @@ body
     height: auto
 
 body.light
-  background-color: $blue-basic
+  background-color: $blue
 
 body.dark
   background-color: $black
   .life-space
-    background-color: $grey-darker
+    background-color: $grey-darkest
+    &__title
+      background-color: #03070A
+      &-bg
+        background: url('../img/bg-desk-dark.png') no-repeat 50% 41%/cover
+        &::before
+          content: ""
+          position: absolute
+          top: 0
+          left: -120%
+          width: 138%
+          height: 100%
+          background: linear-gradient(110deg, rgba(0, 4, 5, 0) 40.78%, #0E1116 84.95%)
+        @media screen and (max-width: 1099px)
+          background: url('../img/bg-tab-dark.png') no-repeat 50% 50%/cover
+          &::before
+            content: ""
+            position: absolute
+            top: 0
+            left: 0
+            width: 36%
+            height: 100%
+            background: linear-gradient(275deg, rgba(0, 4, 5, 0.00) 40.78%, #0E1116 84.95%)
+        @media screen and (max-width: 790px)
+          &::before
+            left: -25px
+            width: 48%
+        @media screen and (max-width: 645px)
+          &::before
+            left: -35px
+        @media screen and (max-width: 619px)
+          &::before
+            background: linear-gradient(264deg, rgba(0, 4, 5, 0) 58.78%, #0E1116 74.95%)
+        @media screen and (max-width: 530px)
+          background: url('../img/bg-mob.png') no-repeat 50% 50%/cover
+          &::before
+            display: none
+    &__contacts
+      &-item
+        background-color: $grey-darker
 
 .life-space
   display: flex
@@ -55,7 +95,7 @@ body.dark
       background: url('../img/bg-desk.jpg') no-repeat 50% 41%/cover
       @media screen and (max-width: 1099px)
         background: url('../img/bg-tab.png') no-repeat 50% 50%/cover
-      @media screen and (max-width: 500px)
+      @media screen and (max-width: 530px)
         background: url('../img/bg-mob.png') no-repeat 50% 50%/cover
     &-text
       width: 1282px
@@ -87,7 +127,7 @@ body.dark
       padding-top: 28px
     &-contacts
       margin-top: 40px
-      padding: 30px 16px
+      padding: 30px 16px 0 16px
   &-h3
     font-family: $font-robotoCondensed-bold
     color: $grey
@@ -132,6 +172,8 @@ body.dark
       text-decoration: underline
     &-top
       display: flex
+    &-bottom
+      margin-bottom: 0
     &-item
       background-color: $blue
       width: 356px
@@ -163,14 +205,16 @@ body.dark
       background: url('../img/facebook.svg') no-repeat 50% 50%/cover
     &-instagram
       margin-top: 7px
+      margin-right: 0
       background: url('../img/instagram.svg') no-repeat 50% 50%/cover
     &-name
       font-family: $font-robotoCondensed-reg
       font-size: 16px
-      line-height: 28px
+      line-height: 20px
+      margin-bottom: 8px
       letter-spacing: 0.32px
       color: $magenta
-
+      text-align: center
 
   &-logo
     width: 408px
