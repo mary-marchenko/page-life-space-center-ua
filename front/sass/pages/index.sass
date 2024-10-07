@@ -18,7 +18,7 @@ $font-robotoCondensed-bold: RobotoCondensed-Bold, sans-serif //700
 
 
 body
-  -webkit-tap-highlight-color: rgba(0,0,0,0)
+  -webkit-tap-highlight-color: transparent
   overscroll-behavior: none
   background-color: $blue
   img,
@@ -34,9 +34,9 @@ body.dark
   .life-space
     background-color: $grey-darkest
     &__title
-      background-color: #03070A
+      background-color: $grey-darkest
       &-bg
-        background: url('../img/bg-desk-dark.png') no-repeat 50% 41%/cover
+        background: url('../img/bg-desk-dark2.png') no-repeat 50% 41%/cover
         &::before
           content: ""
           position: absolute
@@ -220,6 +220,13 @@ body.dark
     width: 408px
     height: 429px
 
-
-
-
+  .btn-dark
+    width: 100px
+    height: 20px
+    background-color: greenyellow
+    display: block
+    position: absolute
+    bottom: 0
+    left: 50%
+    transform: translateX(-50%)
+    cursor: pointer
