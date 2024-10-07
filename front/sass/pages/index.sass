@@ -34,9 +34,9 @@ body.dark
   .life-space
     background-color: $grey-darkest
     &__title
-      background-color: $grey-darkest
+      background-color: rgba(#000405, .5)
       &-bg
-        background: url('../img/bg-desk-dark2.png') no-repeat 50% 41%/cover
+        background: rgba(#000405) url('../img/bg-desk-dark2.png') no-repeat 50% 41%/cover
         &::before
           content: ""
           position: absolute
@@ -220,13 +220,15 @@ body.dark
     width: 408px
     height: 429px
 
-  .btn-dark
-    width: 100px
-    height: 20px
-    background-color: greenyellow
-    display: block
-    position: absolute
-    bottom: 0
-    left: 50%
-    transform: translateX(-50%)
-    cursor: pointer
+// for test
+
+.btn-dark
+  width: 50px
+  height: 20px
+  display: block
+  text-align: center
+  top: 0
+  left: 0
+  cursor: pointer
+  position: fixed
+  z-index: 10
