@@ -85,6 +85,8 @@ body.dark
     width: 100%
     height: 494px
     position: relative
+    display: flex
+    align-items: flex-end
     &-bg
       position: absolute
       top: 0
@@ -101,9 +103,12 @@ body.dark
       width: 1282px
       margin: 0 auto
       padding-left: 56px
-      padding-top: 248px
+      display: flex
+      flex-direction: column
+      align-items: flex-start
       z-index: 1
       position: relative
+      padding-bottom: 90px
   &__h1
     font-family: $font-suisseIntl-semiB
     color: $grey-basic
